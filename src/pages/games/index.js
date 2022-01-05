@@ -1,19 +1,19 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 export const query = graphql`
     query {
         allWpGame {
             edges {
                 node {
-                    id
                     gameMeta {
                         name
-                        releaseYear
                     }
+                id
+                slug
                 }
-            }
+            }   
         }
     }
   
@@ -24,7 +24,7 @@ const GamesPage = ({data: {allWpGame: {edges}}}) => {
     <Layout pageTitle="Games of MGS showroom">
       {edges.map((item) => {
           const game = item.node.gameMeta;
-          return <p key={item.node.id}>{game.name} {game.releaseYear}</p>
+          return <Link to={`/games/${item.node.slug}`}><p key={item.node.id}>{game.name}</p></Link>
       })}
     </Layout>
   )
