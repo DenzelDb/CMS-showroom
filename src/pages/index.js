@@ -2,8 +2,9 @@ import * as React from "react"
 import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from 'gatsby'
-import { header, headerInfo, headerPicture, headerTitle} from "../page.module.css"
+import { header, headerInfo, headerPicture, headerTitle, section, subtitle, games} from "../page.module.css"
 import Header from "../components/header"
+import Game from "../components/game"
 
 export const query = graphql`
 query {
@@ -60,22 +61,13 @@ const HomePage = ({ data: {wpPage: { homePage }}}) => {
           <GatsbyImage className={headerPicture} image={image} alt="image not found."/>
         </div>
       </div>
-      <div>
-        <h1>{homePage.featuredGames.title}</h1>
+      <div className={section}>
+        <h1 className={subtitle}>{homePage.featuredGames.title}</h1>
         <h2>{homePage.featuredGames.description}</h2>
-        <div>
-          {homePage.featuredGames.games.map(game => {
-            const card = getImage(game.gameMeta.cover.localFile)
-            return (
-              <Link to={`artists/${game.slug}`}>
-                <GatsbyImage image={card} alt="no image found"/>
-                <div>
-                  <p>{game.gameMeta.releaseYear}</p>
-                  <p>{game.gameMeta.name}</p>
-                </div>
-              </Link>
-            )
-          })}
+        <div className={games}>
+          {homePage.featuredGames.games.map(game => (
+            <Game slug={`games/${game.slug}`} key={game.id} game={game}/>
+          ))}
         </div>
       </div>
     </Layout>

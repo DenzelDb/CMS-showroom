@@ -24,7 +24,7 @@ const GamesPage = ({data: {allWpGame: {edges}}}) => {
     <Layout pageTitle="Games of MGS showroom">
       {edges.map((item) => {
           const game = item.node.gameMeta;
-          return <Link to={`/games/${item.node.slug}`}><p key={item.node.id}>{game.name}</p></Link>
+          return <Link to={`/games/${item.node.slug}/`}><p key={item.node.id}>{game.name}</p></Link>
       })}
     </Layout>
   )

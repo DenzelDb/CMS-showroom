@@ -26,3 +26,47 @@
     margin: 0;
     margin-bottom: 30px;
 }
+.subtitle {
+    font-size: 4rem;
+    line-height: 3rem;
+    letter-spacing: -0.2rem;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+}
+  
+.section {
+    position: relative;
+    margin-top: 180px;
+    text-align: center;
+}
+  
+/*.section::before,
+.section::after {
+    position: absolute;
+    display: inline-flex;
+    content: "";
+    background-size: 700px 700px;
+    height: 700px;
+    width: 700px;
+    z-index: -1;
+}
+  
+.section::before {
+    top: 40%;
+    left: -40%;
+    background-image: url("./images/blob-1.svg");
+}
+  
+.section::after {
+    top: 0;
+    right: -40%;
+    background-image: url("./images/blob-2.svg");
+}*/
+  
+.games {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    flex-wrap: wrap;
+}
