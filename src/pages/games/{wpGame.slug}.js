@@ -28,7 +28,7 @@ query ($id: String) {
 `
 
 const GamePage = ({data: { wpGame: {gameMeta: game}}}) => {
-  const image = getImage(game.featuredMetalGearimage.localFile)
+  const image = getImage(game.featuredMetalGear.image.localFile)
   return (
     <Layout pageTitle={game.name}>
       <div>

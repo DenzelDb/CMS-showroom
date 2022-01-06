@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { container, nav, navLinks, navLinkItem, navLinkText, siteTitle } from './layout.module.css'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
   return (
     <div className={container}>
-      <title>{pageTitle}</title>
+      <title>{data.site.siteMetadata.title}</title>
       <nav className={nav}>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
         <ul className={navLinks}>
@@ -24,7 +24,6 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1>{pageTitle}</h1>
         {children}
       </main>
     </div>
