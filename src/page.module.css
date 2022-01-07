@@ -2,25 +2,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-}
-  
-.header-info {
+} 
+.headerInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 60%;
-    max-width: 670px;
+    max-width: 1100px;
     margin-right: 30px;
 }
-.header-picture {
+.headerPicture {
     width: 40vw;
     height: 40vw;
     max-width: 500px;
     max-height: 500px;
 }
-.header-title {
-    font-size: 6rem;
-    line-height: 5rem;
+.headerTitle {
+    font-size: 3.5rem;
+    line-height: 3rem;
     letter-spacing: -0.2rem;
     text-transform: uppercase;
     margin: 0;
@@ -34,7 +33,6 @@
     margin: 0;
     margin-bottom: 30px;
 }
-  
 .section {
     position: relative;
     margin-top: 180px;
@@ -63,10 +61,85 @@
     right: -40%;
     background-image: url("./images/blob-2.svg");
 }*/
-  
+
 .games {
     display: flex;
     justify-content: space-between;
     margin-top: 90px;
     flex-wrap: wrap;
+}
+.hero {
+    width: 120vw;
+    height: 500px;
+    transform: translateX(calc((-120vw + 1080px) / 2));
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+  
+.description {
+    max-width: 600px;
+    margin: auto;
+}
+  
+@media screen and (max-width: 1200px) {
+    .hero {
+      transform: translateX(-5%);
+    }
+}
+.gamePictures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.gamePicture {
+    margin: 15px;
+    max-width: 800px;
+    width: 50vw;
+}
+.year {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #37ba83;
+    margin: 0;
+}
+.metalGear {
+    height: 350px;
+    width: 400px;
+    margin-right: 15px;
+    object-fit: cover;
+}  
+.platforms {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0 1rem 0;
+}
+.gameName {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0 1.5rem 0;
+    height: 3rem;
+}
+  
+.gameDescription {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+  
+.gameInfo {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #37ba83;
+}
+.mission-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+.mission-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    max-width: 500px;
+    margin-left: 30px;
 }
