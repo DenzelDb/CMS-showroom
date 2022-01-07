@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { header, headerInfo, year, gamePicture, metalGear, headerTitle, gameInfo, platforms, headerPicture, gameName, gameDescription, gamePictures } from '../../page.module.css'
+import { header, headerInfo, year, gamePicture, metalGear, headerTitle, gameInfo, gameDescription, gamePictures } from '../../page.module.css'
 import { graphql } from 'gatsby'
 
 export const query = graphql`

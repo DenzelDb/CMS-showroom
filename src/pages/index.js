@@ -1,9 +1,8 @@
 import * as React from "react"
 import Layout from '../components/layout'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { header, headerInfo, headerPicture, headerTitle, section, subtitle, games} from "../page.module.css"
-import Header from "../components/header"
 import Game from "../components/game"
 
 export const query = graphql`

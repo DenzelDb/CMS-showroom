@@ -38,30 +38,6 @@
     margin-top: 180px;
     text-align: center;
 }
-  
-/*.section::before,
-.section::after {
-    position: absolute;
-    display: inline-flex;
-    content: "";
-    background-size: 700px 700px;
-    height: 700px;
-    width: 700px;
-    z-index: -1;
-}
-  
-.section::before {
-    top: 40%;
-    left: -40%;
-    background-image: url("./images/blob-1.svg");
-}
-  
-.section::after {
-    top: 0;
-    right: -40%;
-    background-image: url("./images/blob-2.svg");
-}*/
-
 .games {
     display: flex;
     justify-content: space-between;
@@ -80,7 +56,6 @@
     max-width: 600px;
     margin: auto;
 }
-  
 @media screen and (max-width: 1200px) {
     .hero {
       transform: translateX(-5%);
@@ -108,23 +83,10 @@
     margin-right: 15px;
     object-fit: cover;
 }  
-.platforms {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin: 0.5rem 0 1rem 0;
-}
-.gameName {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin: 1.5rem 0 1.5rem 0;
-    height: 3rem;
-}
-  
 .gameDescription {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-  
 .gameInfo {
     font-weight: 700;
     text-transform: uppercase;

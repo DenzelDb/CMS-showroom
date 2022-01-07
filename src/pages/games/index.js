@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../../components/layout'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { hero, section, subtitle, games, description } from '../../page.module.css'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Game from '../../components/game'
